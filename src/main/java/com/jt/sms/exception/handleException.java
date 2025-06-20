@@ -37,15 +37,6 @@ public class handleException {
     //     return map;
     // }
 
-    // @ExceptionHandler(StudentNotFoundException.class)
-    // public ProblemDetail handleNoSuchElementException(StudentNotFoundException e) {
-    //     ProblemDetail problemDetail = ProblemDetail.forStatus(HttpStatus.BAD_REQUEST);
-    //     problemDetail.setTitle("Student Not Found");
-    //     problemDetail.setDetail(e.getMessage());
-    //     problemDetail.setProperty("timestamp", LocalDateTime.now().toString());
-    //     return problemDetail;
-    // }
-
     @ExceptionHandler(StudentNotFoundException.class)
     public ProblemDetail handleNoSuchElementException(StudentNotFoundException e) {
         ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, e.getMessage());
@@ -80,7 +71,7 @@ public class handleException {
     }
 
     @ExceptionHandler(Exception.class)
-    public ProblemDetail handleException(Exception e) {
+    public ProblemDetail handleExceptions(Exception e) {
         return ProblemDetail.forStatusAndDetail(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
     }
 }
