@@ -1,0 +1,24 @@
+server:
+    port: 1300
+
+    servlet:
+        context-path: /sms
+
+spring:
+    application:
+        name: sms
+
+    datasource:
+        url: jdbc:mysql://localhost/sms
+        username: root
+        password: Root
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+
+        show-sql: true
+
+        properties:
+            hibernate:
+                format_sql: true
