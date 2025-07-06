@@ -4,7 +4,6 @@ import java.util.List;
 // import java.util.NoSuchElementException;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import com.jt.sms.dto.StudentDTO;
@@ -13,7 +12,6 @@ import com.jt.sms.exception.StudentNotFoundException;
 import com.jt.sms.repository.StudentRepository;
 
 import lombok.RequiredArgsConstructor;
-import lombok.experimental.var;
 
 @Service
 @RequiredArgsConstructor

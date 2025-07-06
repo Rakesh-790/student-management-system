@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-public class handleException {
+public class HandleException {
     // Traditionally Exception Handle.
     // @ExceptionHandler(NoSuchElementException.class)
     // @ResponseStatus(HttpStatus.BAD_REQUEST)
